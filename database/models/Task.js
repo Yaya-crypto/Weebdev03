@@ -16,8 +16,6 @@ const Task = db.define("instructor", {
     completionStatus: {
       type: Sequelize.BOOLEAN,
     },
-  
-  
   });
 
   module.exports = Task;
