@@ -13,12 +13,19 @@ const seedDB = async () => {
 	});
 
 	const dummyTask = await Task.create({
-		title: "CSCI 39548",
-        location: "C107",
-        timeslot: "W 5:35 - 8:15 PM"
+		description: "Open the door",
+        priorityLevel: 5,
+        completionStatus: false
 	});
 
-	await dummyCourse.setInstructor(dummyInstructor);
+	const dummyTask2 = await Task.create({
+		description: "Close the door",
+        priorityLevel: 5,
+        completionStatus: false
+	});
+
+	await dummyTask.setEmployee(dummyEmployee);
+	await dummyTask2.setEmployee(dummyEmployee2);
 }
 
 module.exports = seedDB;
